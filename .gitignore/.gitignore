@@ -1,0 +1,14 @@
+# Ignore data files
+data/*.csv
+
+# Ignore notebook checkpoints
+**/.ipynb_checkpoints/
+
+# Ignore model files
+*.h5
+*.pkl
+*.joblib
+
+# Ignore system files
+.DS_Store
+Thumbs.db

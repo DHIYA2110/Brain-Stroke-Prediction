@@ -74,7 +74,7 @@ This highlights the importance of age as a risk factor.
 ---
 
 ### 6️⃣ Case 3 – Class Distribution (Partially Balanced Dataset)
-![Class Distribution Case 3](./images/class%20distribution%20case%203.png) 
+![Class Distribution Case 3](./images/class%20distribution%20case3.png) 
 **Insight:**  
 - Positive (stroke) cases increased significantly compared to Case 1, resulting in a better learning balance.
 - Logistic Regression achieved the highest AUC score of **0.89**, the best across all experiments.

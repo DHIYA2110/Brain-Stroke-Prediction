@@ -50,7 +50,7 @@ This highlights the importance of age as a risk factor.
 ---
 
 ### 3️⃣ Case 1 – Correlation Heatmap
-![Correlation Heatmap](./images/Correlation%20Heatmap.png)   
+![Correlation Heatmap](./images/correlation%20heatmap.png)   
 **Insight:**  
 - Age, hypertension, and heart disease show the strongest positive correlation with stroke occurrence.
 - Average glucose level and BMI also contribute moderately.
@@ -58,7 +58,7 @@ This highlights the importance of age as a risk factor.
 ---
 
 ### 4️⃣ Case 1 – ROC AUC Curves (Model Comparison)
-![Model Comparison](./images/Model%20Comparison.png)  
+![Model Comparison](./images/model%20comparison.png)  
 **Insight:**  
 - Logistic Regression, Random Forest, and SVM were evaluated on the imbalanced dataset.
 - ROC AUC scores were relatively low, reinforcing the need for balancing techniques.
@@ -74,7 +74,7 @@ This highlights the importance of age as a risk factor.
 ---
 
 ### 6️⃣ Case 3 – Class Distribution (Partially Balanced Dataset)
-![Class Distribution Case 3](./images/Class%20Distribution%20Case%203.png) 
+![Class Distribution Case 3](./images/class%20distribution%20case%203.png) 
 **Insight:**  
 - Positive (stroke) cases increased significantly compared to Case 1, resulting in a better learning balance.
 - Logistic Regression achieved the highest AUC score of **0.89**, the best across all experiments.

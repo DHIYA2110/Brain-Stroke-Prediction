@@ -38,46 +38,64 @@ Key Visualizations & Insights
 
 ### 1️⃣ Case 1 – Class Distribution (Imbalanced Dataset)
 ![Class Distribution](./images/class_distribution.png)  
-**Insight:** Stroke cases represent <1% of the dataset, leading to severe class imbalance and potential bias towards predicting non-stroke cases.
 
+-The dataset was heavily skewed towards non-stroke cases, with the minority class representing less than 1% of observations.
+
+-All models showed high accuracy (~98%) but failed to identify any stroke cases (recall for class 1 = 0.00).
+
+-This imbalance led to misleading metrics — accuracy appeared strong, but the models had no real predictive power for the minority class.
 ---
 
 ### 2️⃣ Case 1 – Age Distribution by Stroke Outcome
 ![Age Distribution](./images/Age%20Distribution.png)   
-**Insight:** Stroke cases are concentrated in the **40–80 age range**, while non-stroke cases dominate the younger range.  
-This highlights the importance of age as a risk factor.
+
+-This highlights the importance of age as a risk factor.
+-Stroke cases were concentrated in individuals aged 40–80, with the majority of non-stroke cases occurring in younger individuals.
+
+-This reinforces age as a significant risk factor, aligning with medical literature.
+
+
 
 ---
 
 ### 3️⃣ Case 1 – Correlation Heatmap
 ![Correlation Heatmap](./images/correlation%20heatmap.png)   
-**Insight:**  
-- Age, hypertension, and heart disease show the strongest positive correlation with stroke occurrence.
-- Average glucose level and BMI also contribute moderately.
+-Strongest correlations with stroke were found for age, hypertension, and heart disease.
+
+-Average glucose level and BMI showed moderate positive correlations.
+
+-These variables are medically interpretable and can guide targeted interventions.
 
 ---
 
 ### 4️⃣ Case 1 – ROC AUC Curves (Model Comparison)
 ![Model Comparison](./images/model%20comparison.png)  
-**Insight:**  
-- Logistic Regression, Random Forest, and SVM were evaluated on the imbalanced dataset.
-- ROC AUC scores were relatively low, reinforcing the need for balancing techniques.
+-Logistic Regression achieved the highest ROC AUC score (0.8589) among the three models in the imbalanced scenario.
+
+-Despite moderate AUC, all models had zero true positives for stroke, showing that AUC alone is insufficient without considering recall and F1-score for minority class.
 
 ---
 
 ### 5️⃣ Case 2 – Feature Importance (Best Model)
 ![Feature Importance](./images/Feature%20Importance.png) 
 **Insight:**  
-- Age, average glucose level, and hypertension emerged as the top three predictive features.
-- This information can directly guide healthcare monitoring priorities.
+-Balancing the dataset improved detection of stroke cases (recall ~0.83–0.87) but slightly reduced performance for non-stroke cases (recall ~0.71–0.75).
 
+-Random Forest marginally outperformed others, but all models performed closely.
+
+-The most influential features included age, average glucose level, and hypertension, which can be prioritized in healthcare screenings.
 ---
 
 ### 6️⃣ Case 3 – Class Distribution (Partially Balanced Dataset)
 ![Class Distribution Case 3](./images/class%20distribution%20case3.png) 
 **Insight:**  
-- Positive (stroke) cases increased significantly compared to Case 1, resulting in a better learning balance.
-- Logistic Regression achieved the highest AUC score of **0.89**, the best across all experiments.
+-Partial balancing combined the benefits of maintaining the original distribution and improving minority class detection.
+
+-Logistic Regression achieved the best overall trade-off, with recall for class 1 = 0.90 and class 0 = 0.72, and an AUC of 0.8933.
+
+-This approach reduced both false positives and false negatives, making it the most practical and robust solution.
+
+
 
 ---
 
